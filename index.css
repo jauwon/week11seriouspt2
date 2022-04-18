@@ -1,0 +1,115 @@
+
+/* how you make a variable for the color that will be used a lot of the time. */
+:root {
+    --purple: #3e0249;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    /* color of text  */
+    color: var(--purple);
+    font-family: sans-serif;
+    background-image: url('ed0d5995-0902-43d1-9644-1aa7a1a27d81.webp');
+    /* to ensure that the image does not become too large for a screen  */
+    background-size: cover;
+}
+
+
+/* set everything to border-box sizing meaning that the boarder and the width will be added in the element itself. */
+* {
+    box-sizing: border-box;
+}
+
+h1 {
+    font-size: 55px;
+    text-transform: uppercase;
+}
+/*commented out due to not being able to figure out a proper solution BUT left in so when I find the answers I can correct and improve this.
+/* h3 {
+    font-size: 30px;
+}
+#jules{
+    position: absolute;
+    float: right;
+    background-color: pink;
+}
+#blu {
+    position: left;
+    background-color: powderblue;
+}
+#bIcon {
+    
+    float: right;
+    height: 500px;
+} */
+
+/* #jIcon {
+    height: 50vh;
+    display: flex;
+    flex-direction: column-reverse;
+    /* to center content in middle of screen */
+    /* justify-content: flex-start;
+} */ 
+
+.container {
+    padding: 40px;
+    /* vh = view height */
+    height: 100vh;
+    display: flex;
+    /* to center content in middle of screen */
+    justify-content: center;
+    align-items: center;
+    /* to have them stacked properly we will use column */
+    flex-direction: column;
+}
+
+
+#gameBoard {
+    /* 150 x 3 = 450 */
+    width: 450px;
+    display: flex;
+    /* to warp around once 450px is reached */
+    flex-wrap: wrap;
+    margin-top: 40px;
+}
+
+.box {
+    height: 150px;
+    width: 150px;
+    display: flex;
+    /* same reasoning of before to center and using flex to connect with our gameBoard id  */
+    justify-content: center;
+    align-items: center;
+    color: var(--purple);
+    font-size: 150px ;
+    /* I like my backgrounds to be seen so a nice semi transulent color is always preferred. */
+    background-color: hsla(323, 100%, 82%, 0.3);
+}
+
+/* #player1 {
+    background-image: url('thinkin.jules.png');
+    height: 100px;
+    justify-content: left;
+}
+#player2 {
+    background-image: url('victory.jules.png');
+    height: ;
+    justify-content: right;
+} */
+
+button {
+    padding: 10px 20px;
+    border-radius: 10px;
+    background-color: var(--purple);
+    color: white;
+    border-color: var(--purple);
+    font-size: 18px;
+    transition: 200ms transform;
+}
+
+button:hover {
+    cursor: pointer;
+    /* makes button slightly go up when hovered over it is nice. planning on using this to help create the illusion of movement for the players */
+    transform: translateY(-3px);
+} 
